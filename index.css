@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@400;500&display=swap');
+
+html {
+    background-color: #010101;
+}
+
+div#links > a.link {
+    font-size: 48px;
+    font-family: 'Finlandica', sans-serif;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+    color:#EEEEEE;
+    display: block;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+div#links > a.link[data-focus="none"] {
+    opacity: 0.6;
+}
+
+div#links > a.link[data-focus="yes"] {
+    opacity: 1;
+}
+
+div#links > a.link[data-focus="no"] {
+    opacity: 0.3;
+}
+
+div#links {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10vw;
+    transition: transform 500ms ease-in-out;
+}
+
+div#links[data-moveleft="yes"] {
+    transform: translateX(-15vw);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1#mark {
+    position: absolute;
+    font-family: 'Finlandica', sans-serif;
+    font-weight: 500;
+    margin: 0px;
+    top: 1vw;
+    left: 1vw;
+    font-size: 32px;
+    color: #EEEEEE;
+}
+
+article {
+    position: absolute;
+    opacity: 0;
+    font-family: 'Helvetica', sans-serif;
+    color: #EEEEEE;
+    transition: transform 500ms ease, opacity 1s ease;
+}
+
+article[data-visible="no"] {
+    top: 10vw;
+    left: 10vw;
+    transform: translateX(100%);
+}
+
+article[data-visible="yes"] {
+    opacity: 1;
+    top: 10vw;
+    left: 10vw;
+}
+
+article > h1 {
+    font-size: 48px;
+}
+
+article > P {
+    font-size: 24px;
+}
+
+a {
+    color: #EEEEEE;
+}
+
+span#back {
+    position: absolute;
+    top: 5vw;
+    left: 10vw;
+    color: #EEEEEE;
+    font-size: 48px;
+    font-family: 'Finlandica', sans-serif;
+    cursor: pointer;
+    opacity: 0;
+    transition: transform 500ms ease, opacity 1s ease;
+    z-index: 10;
+}
+
+span#back[data-visible="no"] {
+    transform: translateX(100%);
+}
+
+span#back[data-visible="yes"] {
+    opacity: 1;
+}
