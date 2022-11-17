@@ -14,6 +14,7 @@ div#links > a.link {
     display: block;
     margin-top: 2vw;
     margin-bottom: 2vw;
+    width: fit-content;
 }
 
 div#links > a.link[data-focus="none"] {
