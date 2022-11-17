@@ -9,7 +9,8 @@ const greetings = [
     "Hei!",
     "Hej!",
     "¡Hola!",
-    "Servus!" 
+    "Servus!",
+    "Bëgnudüs!"
 ];
 
 const links = document.getElementById("links");
