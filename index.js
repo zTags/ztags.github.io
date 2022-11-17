@@ -1,9 +1,28 @@
+const greetings = [
+    "Hey!", 
+    "Hiya!", 
+    "Hello!", 
+    "Hé!", 
+    "Hallo!", 
+    "Ahoj!", 
+    "Salut!",
+    "Hei!",
+    "Hej!",
+    "¡Hola!",
+    "Servus!" 
+];
+
 const links = document.getElementById("links");
 const about = document.getElementsByClassName("link")[0];
 const games = document.getElementsByClassName("link")[1];
 const articleAboutMe = document.getElementById("aboutme");
+const greeting = document.getElementById("greeting");
 const articleGames = document.getElementById("games");
 const arrow = document.getElementById("back");
+
+const random = max => Math.floor(Math.random() * max);
+
+const randomGreeting = () => greeting.innerHTML = greetings[random(greetings.length)];
 
 const reset = () => {
     about.dataset.focus = "none";
@@ -30,6 +49,7 @@ about.addEventListener("click", event => {
     links.dataset.moveleft = "yes";
     articleAboutMe.dataset.visible = "yes";
     arrow.dataset.visible = "yes";
+    randomGreeting();
 });
 
 games.addEventListener("click", event => {

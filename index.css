@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
 html {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(72,72,80,1) 100%, rgba(0,212,255,1) 100%);
+    background: rgb(111, 0, 255);
+    background: linear-gradient(50deg, rgb(111, 0, 255) 0%, rgba(0,179,201,1) 100%);
 }
 
 div#links > a.link {
     font-size: 48px;
-    font-family: 'Finlandica', sans-serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     cursor: pointer;
     transition: opacity 500ms ease;
     color:#EEEEEE;
@@ -50,7 +50,7 @@ body {
 
 h1#mark {
     position: absolute;
-    font-family: 'Finlandica', sans-serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     font-weight: 500;
     margin: 0px;
     top: 1vw;
@@ -65,6 +65,7 @@ article {
     font-family: 'Helvetica', sans-serif;
     color: #EEEEEE;
     transition: transform 500ms ease, opacity 1s ease;
+    width: 70vw;
 }
 
 article[data-visible="no"] {
@@ -97,7 +98,7 @@ span#back {
     left: 10vw;
     color: #EEEEEE;
     font-size: 48px;
-    font-family: 'Finlandica', sans-serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     cursor: pointer;
     opacity: 0;
     transition: transform 500ms ease, opacity 1s ease;
@@ -110,4 +111,8 @@ span#back[data-visible="no"] {
 
 span#back[data-visible="yes"] {
     opacity: 1;
+}
+
+ul {
+    font-size: 24px;
 }
