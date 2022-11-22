@@ -3,6 +3,7 @@
 html {
     background: rgb(111, 0, 255);
     background: linear-gradient(50deg, rgb(111, 0, 255) 0%, rgba(0,179,201,1) 100%);
+    overflow: hidden;
 }
 
 div#links > a.link {
@@ -36,7 +37,7 @@ div#links {
     flex-direction: column;
     justify-content: center;
     padding-left: 10vw;
-    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in;
 }
 
 div#links[data-moveleft="yes"] {
@@ -46,7 +47,7 @@ div#links[data-moveleft="yes"] {
 body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant implement overflow in css */
 }
 
 h1#mark {
@@ -85,7 +86,7 @@ article > h1 {
     font-size: 48px;
 }
 
-article > P {
+article > p {
     font-size: 24px;
 }
 
@@ -116,4 +117,28 @@ span#back[data-visible="yes"] {
 
 ul {
     font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    /* article {
+        width: 95vw;
+        padding: 2.5vw;
+    } */
+
+    article > h1 {
+        font-size: 24px;
+    }
+    
+    article > p {
+        font-size: 16px;
+    }
+
+    h1#mark {
+        opacity: 0;
+    }
+
+    div#links[data-moveleft="yes"] {
+        transform: translateX(-15vw);
+        opacity: 0;
+    }
 }
