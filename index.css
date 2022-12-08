@@ -38,6 +38,8 @@ div#links {
     justify-content: center;
     padding-left: 10vw;
     transition: transform 500ms ease-in-out, opacity 500ms ease-in;
+    /* z-index: 2; */
+    position: relative;
 }
 
 div#links[data-moveleft="yes"] {
@@ -47,7 +49,8 @@ div#links[data-moveleft="yes"] {
 body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden; /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant implement overflow in css */
+    overflow: hidden; /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant such a simple feature like hiding overflow */
+    margin: 0px;
 }
 
 h1#mark {
@@ -80,6 +83,7 @@ article[data-visible="yes"] {
     opacity: 1;
     top: 10vw;
     left: 10vw;
+    z-index: 20;
 }
 
 article > h1 {
