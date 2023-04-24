@@ -14,7 +14,7 @@ const greetings = [
     "Здравствуйте",
     "Сәлем",
     "こんにちわ",
-    "привіт"
+    "Привіт"
 ];
 
 const links = document.getElementById("links");
