@@ -11,10 +11,10 @@ const greetings = [
     "¡Hola!",
     "Servus!",
     "Bëgnudüs!",
-    "Здравствуйте",
-    "Сәлем",
-    "こんにちわ",
-    "Привіт"
+    "Здравствуйте!",
+    "Сәлем!",
+    "こんにちわ!",
+    "Привіт!"
 ];
 
 const links = document.getElementById("links");
