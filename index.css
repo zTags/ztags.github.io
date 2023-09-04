@@ -63,7 +63,6 @@ h1#mark {
     left: 1vw;
     font-size: 32px;
     color: #EEEEEE;
-    z-index: 999;
 }
 
 article {
@@ -110,7 +109,7 @@ span#back {
     cursor: pointer;
     opacity: 0;
     transition: transform 500ms ease, opacity 1s ease;
-    z-index: 10;
+    z-index: 999;
 }
 
 span#back[data-visible="no"] {
