@@ -50,7 +50,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant such a simple feature like hiding overflow */
+    /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant implement such a simple feature like hiding overflow */
     margin: 0px;
 }
 
