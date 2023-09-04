@@ -2,31 +2,31 @@
 
 html {
     background: rgb(111, 0, 255);
-    background: linear-gradient(50deg, rgb(111, 0, 255) 0%, rgba(0,179,201,1) 100%);
+    background: linear-gradient(50deg, rgb(111, 0, 255) 0%, rgba(0, 179, 201, 1) 100%);
     overflow: hidden;
 }
 
-div#links > a.link {
+div#links>a.link {
     font-size: 48px;
     font-family: 'Atkinson Hyperlegible', sans-serif;
     cursor: pointer;
     transition: opacity 500ms ease;
-    color:#EEEEEE;
+    color: #EEEEEE;
     display: block;
     margin-top: 2vw;
     margin-bottom: 2vw;
     width: fit-content;
 }
 
-div#links > a.link[data-focus="none"] {
+div#links>a.link[data-focus="none"] {
     opacity: 0.6;
 }
 
-div#links > a.link[data-focus="yes"] {
+div#links>a.link[data-focus="yes"] {
     opacity: 1;
 }
 
-div#links > a.link[data-focus="no"] {
+div#links>a.link[data-focus="no"] {
     opacity: 0.3;
 }
 
@@ -49,7 +49,8 @@ div#links[data-moveleft="yes"] {
 body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden; /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant such a simple feature like hiding overflow */
+    overflow: hidden;
+    /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant such a simple feature like hiding overflow */
     margin: 0px;
 }
 
@@ -86,11 +87,11 @@ article[data-visible="yes"] {
     z-index: 20;
 }
 
-article > h1 {
+article>h1 {
     font-size: 48px;
 }
 
-article > p {
+article>p {
     font-size: 24px;
 }
 
@@ -123,26 +124,26 @@ ul {
     font-size: 24px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1340px) {
     /* article {
         width: 95vw;
         padding: 2.5vw;
     } */
 
-    article > h1 {
+    article>h1 {
         font-size: 24px;
     }
-    
-    article > p {
+
+    article>p {
         font-size: 16px;
     }
 
     h1#mark {
-        opacity: 0;
+        opacity: 0%;
     }
 
     div#links[data-moveleft="yes"] {
         transform: translateX(-15vw);
-        opacity: 0;
+        opacity: 0%;
     }
 }
