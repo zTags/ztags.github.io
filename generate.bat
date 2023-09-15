@@ -1,0 +1,1 @@
+py ./generate-animated-gradient.py "#9400ff" "#6f00ff" "#27005d" "#27005d" 100 linear 114
