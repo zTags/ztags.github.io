@@ -3,56 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/index.css" rel="stylesheet" />
-    <script src="/index.js" defer></script>
-    <title>Home - tags</title>
-
-    <meta property="og:title" content="tags's website" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ztags.github.io/" />
-    <meta property="og:image" content="https://ztags.github.io/embed_icon.jpg" />
-    <meta property="og:description" content="Heya!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="generated.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <link rel="prefetch" href="/assets/background.jpg" />
+    <title>home - tags</title>
 </head>
 
-<body>
-    <h1 id="mark">tags</h1>
-
-    <div id="links" data-moveleft="no">
-        <a class="link" data-focus="none">About me</a>
-        <a class="link" data-focus="none">My stuff</a>
+<body id="body">
+    <div id="introduction">
+        <img src="/assets/background.jpg" id="background" />
+        <h1 id="title">tags</h1>
+        <p id="goobgoob">Rust. GameMaker. Photography.</p>
+        <div id="button-container">
+            <button id="about-me-btn">About Me</button>
+        </div>
     </div>
 
-    <span id="back" data-visible="no">&larr;</span>
+    <div id="about-me">
+        <span id="about-me-content">
+            <div id="about-me-gamemaker">
+                <h2>GameMaker</h2>
+                <p>
+                    I've submitted a game made with GameMaker to the GMTK Game Jam 2023, <a
+                        href="https://tagsdev.itch.io/lost-dog">Lost Dog</a>.
+                    The game I'm currently working on is Forestgame (you can join the <a
+                        href="https://discord.gg/ECcWd22jsx">discord!</a>).
+                </p>
+            </div>
 
-    <article id="aboutme" data-visible="no">
-        <h1>About me</h1>
-        <p id="aboutme-p">
-            <span id="greeting"></span> I'm tags, a self-taught Rust developer. Nice to meet you!
-            The first programming language I learnt was java, because I wanted to make my own Minecraft mod. I've yet to
-            make a mod, but modding is still one of the things I like to do in my spare time. In my opinion, modding
-            support can
-            really contribute to the lifetime of a game.
-            <br /> <br />
-            My socials:
-        <ul>
-            <li><a href="https://twitter.com/tagsdev">Twitter</a></li>
-            <li><a href="https://github.com/zTags">GitHub</a></li>
-            <li><a href="https://youtube.com/@tagsdev">YouTube</a></li>
-            <li><a href="https://tagsdev.itch.io">itch.io</a></li>
+            <span id="layout-fix">
+                <div id="about-me-rust">
+                    <h2>Rust</h2>
+                    <p>
+                        I've been using Rust for around 3 years now, I've yet to use it for a big project, but it has
+                        worked
+                        really well for me for automating specific tasks.
+                    </p>
+                </div>
+            </span>
 
-        </ul>
-        </p>
-    </article>
 
-    <article id="games" data-visible="no">
-        <h1>My stuff</h1>
-        <p>
-            <a href="https://tagsdev.itch.io/lost-dog">Lost Dog - My GMTK23 game made together with lunar</a>
-            <a href="https://tagsdev.itch.io/shoarma-clicker">Shoarma clicker - no questions? good.</a>
-        </p>
-    </article>
+            <div id="about-me-photography">
+                <h2>Photography</h2>
+                <p>
+                    I picked up photography when going on vacation to Noord-Holland where I made some cool looking
+                    photos of the sky. Since then I haven't made a lot of nature photos, I prefer the city.
+                </p>
+            </div>
+        </span>
+        <div id="social-links">
+            <a href="https://www.youtube.com/@tagsdev">YouTube</a>
+            |
+            <a href="https://www.twitter.com/@tagsdev">Twitter/X</a>
+            |
+            <a href="https://www.instagram.com/ztags__/">Instagram</a>
+
+        </div>
+    </div>
 </body>
 
 </html>

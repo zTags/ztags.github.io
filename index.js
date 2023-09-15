@@ -1,76 +1,36 @@
-const greetings = [
-    "Hey!", 
-    "Hiya!", 
-    "Hello!", 
-    "Hé!", 
-    "Hallo!", 
-    "Ahoj!", 
-    "Salut!",
-    "Hei!",
-    "Hej!",
-    "¡Hola!",
-    "Servus!",
-    "Bëgnudüs!",
-    "Здравствуйте!",
-    "Сәлем!",
-    "こんにちわ!",
-    "Привіт!"
-];
+const background = document.getElementById("introduction");
+const aboutMe = document.getElementById("about-me-btn");
+const aboutMeContent = document.getElementById("about-me-content");
 
-const links = document.getElementById("links");
-const about = document.getElementsByClassName("link")[0];
-const games = document.getElementsByClassName("link")[1];
-const articleAboutMe = document.getElementById("aboutme");
-const greeting = document.getElementById("greeting");
-const articleGames = document.getElementById("games");
-const arrow = document.getElementById("back");
+const aboutMeDiv = document.getElementById("about-me");
 
-const random = max => Math.floor(Math.random() * max);
+const aboutMeGM = document.getElementById("about-me-gamemaker");
+const aboutMePhotography = document.getElementById("about-me-photography");
+const aboutMeRust = document.getElementById("about-me-rust");
 
-const randomGreeting = () => greeting.innerHTML = greetings[random(greetings.length)];
 
-const reset = () => {
-    about.dataset.focus = "none";
-    games.dataset.focus = "none";
+aboutMe.addEventListener("click", ev => {
+    aboutMeDiv.scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+background.style.opacity = 1;
+
+
+
+let options = {
+    root: document.querySelector("#scrollArea"),
+    rootMargin: "0px",
+    threshold: 0.5,
 };
 
-const disabled = () => links.dataset.moveleft == "yes";
+let opacityObserver = new IntersectionObserver((entries, _) => {
+    entries.forEach(entry => {
+        entry.target.style.opacity = entry.isIntersecting ? 1 : 0;
+    });
+}, options);
 
-about.addEventListener("mouseover", event => {
-    if (disabled()) return;
-    event.target.dataset.focus = "yes";
-    games.dataset.focus = "no";
-});
-
-games.addEventListener("mouseover", event => {
-    if (disabled()) return;
-    event.target.dataset.focus = "yes";
-    about.dataset.focus = "no";
-});
-
-
-about.addEventListener("click", event => {
-    if (disabled()) return;
-    links.dataset.moveleft = "yes";
-    articleAboutMe.dataset.visible = "yes";
-    arrow.dataset.visible = "yes";
-    randomGreeting();
-});
-
-games.addEventListener("click", event => {
-    if (disabled()) return;
-    links.dataset.moveleft = "yes";
-    articleGames.dataset.visible = "yes";
-    arrow.dataset.visible = "yes";
-});
-
-arrow.addEventListener("click", event => {
-    articleAboutMe.dataset.visible = "no";
-    articleGames.dataset.visible = "no";
-    arrow.dataset.visible = "no";
-    links.dataset.moveleft = "no";
-});
-
-
-games.addEventListener("mouseleave", reset);
-about.addEventListener("mouseleave", reset);
+opacityObserver.observe(aboutMeGM);
+opacityObserver.observe(aboutMePhotography);
+opacityObserver.observe(aboutMeRust);

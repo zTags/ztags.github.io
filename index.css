@@ -1,149 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+/* 
+    Colour palette:
+    Primary: #27005D
+    Secondary: #9400FF
+    Tertiary: #AED2FF
+    Text: #E4F1FF
+*/
 
-html {
-    background: rgb(111, 0, 255);
-    background: linear-gradient(50deg, rgb(111, 0, 255) 0%, rgba(0, 179, 201, 1) 100%);
-    overflow: hidden;
-}
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400&display=swap');
 
-div#links>a.link {
-    font-size: 48px;
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-    cursor: pointer;
-    transition: opacity 500ms ease;
-    color: #EEEEEE;
-    display: block;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    width: fit-content;
-}
-
-div#links>a.link[data-focus="none"] {
-    opacity: 0.6;
-}
-
-div#links>a.link[data-focus="yes"] {
-    opacity: 1;
-}
-
-div#links>a.link[data-focus="no"] {
-    opacity: 0.3;
-}
-
-div#links {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10vw;
-    transition: transform 500ms ease-in-out, opacity 500ms ease-in;
-    /* z-index: 2; */
-    position: relative;
-}
-
-div#links[data-moveleft="yes"] {
-    transform: translateX(-15vw);
-}
-
+html,
 body {
+    padding: 0px;
+    margin: 0px;
+    z-index: -20;
+}
+
+div#introduction {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    /* this doesnt work on mobile because apparently making mobile browsers is so hard you cant implement such a simple feature like hiding overflow */
-    margin: 0px;
-}
-
-h1#mark {
-    position: absolute;
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-weight: 500;
-    margin: 0px;
-    top: 1vw;
-    left: 1vw;
-    font-size: 32px;
-    color: #EEEEEE;
-}
-
-article {
-    position: absolute;
     opacity: 0;
-    font-family: 'Helvetica', sans-serif;
-    color: #EEEEEE;
-    transition: transform 500ms ease, opacity 1s ease;
-    width: 70vw;
+    transition: opacity 1s;
+    transition-timing-function: ease-out;
 }
 
-article[data-visible="no"] {
-    top: 10vw;
-    left: 10vw;
-    transform: translateX(100%);
+img#background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    filter: grayscale(0.4);
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
 }
 
-article[data-visible="yes"] {
-    opacity: 1;
-    top: 10vw;
-    left: 10vw;
-    z-index: 20;
+h1#title {
+    /* font-family: 'Alegreya Sans SC', sans-serif; */
+    font-family: 'Saira', sans-serif;
+    margin: 0px;
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 10rem;
+    color: #27005DC0;
+    user-select: none;
+    filter: initial;
 }
 
-article>h1 {
-    font-size: 48px;
+p#goobgoob {
+    font-family: 'Saira', sans-serif;
+    color: #E4F1FF;
+    text-align: center;
+    font-size: 3em;
+    filter: initial;
 }
 
-article>p {
-    font-size: 24px;
+div#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button#about-me-btn {
+    width: 10vw;
+    height: 10vh;
+    border-style: solid;
+    border-color: #9400FF;
+    border-width: 5px;
+    color: #E4F1FF;
+    background-color: transparent;
+    font-family: 'Saira', sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    transition:
+        color .2s, background-color .2s;
+    transition-timing-function: ease-in;
+    mix-blend-mode: screen;
+    border-radius: 2px;
+}
+
+
+
+button#about-me-btn:hover {
+    background-color: #9400FF;
+    color: #000;
+    cursor: pointer;
+}
+
+div#about-me {
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(148, 0, 255);
+    background: linear-gradient(114deg, var(--grad-colour-one) 0%, var(--grad-colour-two) 100%);
+    animation-name: generated-1303977f-1066-4876-a76d-dadfe6d2bde4;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+span#about-me-content {
+    width: 100%;
+    height: fit-content;
+    display: inline-block;
+
+}
+
+div#about-me-gamemaker {
+    padding: 3em;
+    color: #E4F1FF;
+    font-family: 'Saira', sans-serif;
+    transition: opacity 500ms;
+    transition-timing-function: ease-in;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    width: 40em;
+}
+
+div#about-me-gamemaker>h2 {
+    font-size: 3em;
+}
+
+div#about-me-rust {
+    padding: 3em;
+    color: #E4F1FF;
+    font-family: 'Saira', sans-serif;
+    float: right;
+    text-align: right;
+    width: 40em;
+    transition: opacity 500ms;
+    transition-timing-function: ease-in;
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+div#about-me-rust>h2 {
+    font-size: 3em;
+}
+
+div#about-me-photography {
+    padding: 3em;
+    color: #E4F1FF;
+    font-family: 'Saira', sans-serif;
+    width: 40em;
+    transition: opacity 500ms;
+    transition-timing-function: ease-in;
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+div#about-me-photography>h2 {
+    font-size: 3em;
 }
 
 a {
-    color: #EEEEEE;
+    color: #E4F1FF;
 }
 
-span#back {
+span#layout-fix {
+    width: 100vw;
+    height: fit-content;
+    display: inline-block;
+}
+
+div#about-me-gamemaker>img {
+    display: inline;
+}
+
+div#social-links {
     position: absolute;
-    top: 5vw;
-    left: 10vw;
-    color: #EEEEEE;
-    font-size: 48px;
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-    cursor: pointer;
-    opacity: 0;
-    transition: transform 500ms ease, opacity 1s ease;
-    z-index: 999;
+    bottom: -100vh;
+    float: right;
+    z-index: 10;
+    padding: 0.5em;
+    text-align: right;
+    width: calc(100vw - 1em);
+    font-family: 'Saira', sans-serif;
+    color: #E4F1FF;
 }
 
-span#back[data-visible="no"] {
-    transform: translateX(100%);
-}
-
-span#back[data-visible="yes"] {
-    opacity: 1;
-}
-
-ul {
-    font-size: 24px;
-}
-
-@media only screen and (max-width: 1340px) {
-    /* article {
-        width: 95vw;
-        padding: 2.5vw;
-    } */
-
-    article>h1 {
-        font-size: 24px;
-    }
-
-    article>p {
-        font-size: 16px;
-    }
-
-    h1#mark {
-        opacity: 0%;
-    }
-
-    div#links[data-moveleft="yes"] {
-        transform: translateX(-15vw);
-        opacity: 0%;
-    }
+div#social-links>a {
+    font-family: 'Saira', sans-serif;
+    color: #E4F1FF;
 }
