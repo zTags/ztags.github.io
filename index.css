@@ -52,6 +52,7 @@ p#goobgoob {
     text-align: center;
     font-size: 3em;
     filter: initial;
+    margin-bottom: 24px;
 }
 
 div#button-container {
@@ -61,7 +62,7 @@ div#button-container {
 }
 
 button#about-me-btn {
-    width: 10vw;
+    width: 10em;
     height: 10vh;
     border-style: solid;
     border-color: #9400FF;
@@ -70,15 +71,14 @@ button#about-me-btn {
     background-color: transparent;
     font-family: 'Saira', sans-serif;
     font-weight: 400;
-    font-size: larger;
+    font-size: 24pt;
     transition:
         color .2s, background-color .2s;
     transition-timing-function: ease-in;
     mix-blend-mode: screen;
     border-radius: 2px;
+
 }
-
-
 
 button#about-me-btn:hover {
     background-color: #9400FF;
@@ -165,18 +165,33 @@ div#about-me-gamemaker>img {
 }
 
 div#social-links {
-    position: absolute;
-    bottom: -100vh;
-    float: right;
-    z-index: 10;
     padding: 0.5em;
     text-align: right;
     width: calc(100vw - 1em);
     font-family: 'Saira', sans-serif;
     color: #E4F1FF;
+    transform: translateY(-100%);
 }
 
 div#social-links>a {
     font-family: 'Saira', sans-serif;
     color: #E4F1FF;
+}
+
+@media only screen and (max-width: 700px) {
+    div#about-me-gamemaker {
+        max-width: 70vw;
+    }
+
+    div#about-me-rust {
+        max-width: 70vw;
+    }
+
+    div#about-me-photography {
+        max-width: 70vw;
+    }
+
+    button#about-me-btn {
+        width: fit-content;
+    }
 }
