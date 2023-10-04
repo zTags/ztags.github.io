@@ -27,7 +27,9 @@ let options = {
 
 let opacityObserver = new IntersectionObserver((entries, _) => {
     entries.forEach(entry => {
-        entry.target.style.opacity = entry.isIntersecting ? 1 : 0;
+        console.log(entry);
+        entry.target.style.opacity = (entry.isIntersecting || entry.boundingClientRect.y < 0) ? 1 : 0;
+
     });
 }, options);
 

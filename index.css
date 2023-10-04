@@ -100,7 +100,7 @@ span#about-me-content {
     width: 100%;
     height: fit-content;
     display: inline-block;
-
+    padding-bottom: 24px;
 }
 
 div#about-me-gamemaker {
@@ -170,12 +170,18 @@ div#social-links {
     width: calc(100vw - 1em);
     font-family: 'Saira', sans-serif;
     color: #E4F1FF;
-    transform: translateY(-100%);
+
+    position: absolute;
+    bottom: -100vh;
 }
 
 div#social-links>a {
     font-family: 'Saira', sans-serif;
     color: #E4F1FF;
+}
+
+h2.nopadding {
+    margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -193,5 +199,10 @@ div#social-links>a {
 
     button#about-me-btn {
         width: fit-content;
+    }
+
+    div#social-links {
+        position: relative;
+        bottom: 0px;
     }
 }
