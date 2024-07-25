@@ -1,0 +1,1 @@
+- [ ] switch to github actions build system so i can minify the code
