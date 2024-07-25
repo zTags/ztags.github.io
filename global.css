@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Proggy";
+    src: url(/static/ProggyCleanCE.ttf);
+}
+
+#content-left {
+    width: 20vw;
+    display: inline-block;
+    margin: 1em;
+}
+
+#content-right {
+    width: 20vw;
+    display: inline-block;
+    margin: 1em;
+}
+
+#content-middle {
+    width: 30vw;
+    display: inline-block;
+    margin: 1em;
+}
+
+#center-content {
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    border: 3px solid #98f5e1;
+    width: 100%;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+body {
+    background-color: #b8b8ff;
+}
+
+html {
+    color: #eeeeee;
+    font-family: "Proggy";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+a {
+    color: #eeeeee;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li::before {
+    content: "> ";
+}
